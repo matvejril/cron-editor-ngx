@@ -1,0 +1,13 @@
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle"
+          type="button"
+          data-toggle="dropdown">
+    {{translate.currentLang}}
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li *ngFor="let lang of translate.langs">
+      <a href="#" (click)="translate.use(lang)">{{lang}}</a>
+    </li>
+  </ul>
+</div>

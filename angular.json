@@ -26,7 +26,10 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -131,33 +134,33 @@
         }
       }
     },
-    "cron-editor": {
-      "root": "projects/cron-editor",
-      "sourceRoot": "projects/cron-editor/src",
+    "cron-editor-ngx-translate": {
+      "root": "projects/cron-editor-ngx-translate",
+      "sourceRoot": "projects/cron-editor-ngx-translate/src",
       "projectType": "library",
       "prefix": "cron",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/cron-editor/tsconfig.lib.json",
-            "project": "projects/cron-editor/ng-package.json"
+            "tsConfig": "projects/cron-editor-ngx-translate/tsconfig.lib.json",
+            "project": "projects/cron-editor-ngx-translate/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/cron-editor/src/test.ts",
-            "tsConfig": "projects/cron-editor/tsconfig.spec.json",
-            "karmaConfig": "projects/cron-editor/karma.conf.js"
+            "main": "projects/cron-editor-ngx-translate/src/test.ts",
+            "tsConfig": "projects/cron-editor-ngx-translate/tsconfig.spec.json",
+            "karmaConfig": "projects/cron-editor-ngx-translate/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/cron-editor/tsconfig.lib.json",
-              "projects/cron-editor/tsconfig.spec.json"
+              "projects/cron-editor-ngx-translate/tsconfig.lib.json",
+              "projects/cron-editor-ngx-translate/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

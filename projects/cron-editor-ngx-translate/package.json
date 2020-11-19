@@ -1,0 +1,32 @@
+{
+  "name": "cron-editor-ngx-translate",
+  "description": "A cron expression generator to be used in Angular applications",
+  "author": {
+    "name": "Stanislav Burdukowsky",
+    "email": "burdukowskystas@gmail.com",
+    "url": "https://burdukowsky.tk"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/burdukowsky/cron-editor-ngx-translate"
+  },
+  "bugs": {
+    "url": "https://github.com/burdukowsky/cron-editor-ngx-translate/issues"
+  },
+  "homepage": "https://github.com/burdukowsky/cron-editor-ngx-translate",
+  "keywords": [
+    "angular",
+    "cron",
+    "cron-expression",
+    "angular-cli",
+    "quartz",
+    "ngx-translate"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=7.0.0",
+    "@angular/core": ">=7.0.0",
+    "@ngx-translate/core": ">=11.0.0"
+  }
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges } from '@angular/core';
 import { CronOptions } from './CronOptions';
 
-import { Days, MonthWeeks, Months } from './enums';
+import { MonthWeeks, Months } from './enums';
 import Utils from './Utils';
 
 @Component({
@@ -54,26 +54,26 @@ export class CronEditorComponent implements OnInit, OnChanges {
   }
 
   public dayDisplay(day: string): string {
-    return Days[day];
+    return 'WEEK.' + day;
   }
 
   public monthWeekDisplay(monthWeekNumber: number): string {
-    return MonthWeeks[monthWeekNumber];
+    return 'MONTH_WEEK.' + MonthWeeks[monthWeekNumber];
   }
 
   public monthDisplay(month: number): string {
-    return Months[month];
+    return 'MONTH.' + Months[month];
   }
 
   public monthDayDisplay(month: string): string {
     if (month === 'L') {
-      return 'Last Day';
+      return 'MONTH_DAY.LAST_DAY';
     } else if (month === 'LW') {
-      return 'Last Weekday';
+      return 'MONTH_DAY.LAST_WEEKDAY';
     } else if (month === '1W') {
-      return 'First Weekday';
+      return 'MONTH_DAY.FIRST_WEEKDAY';
     } else {
-      return `${month}${this.getOrdinalSuffix(month)} day`;
+      return 'MONTH_DAY.DAY_N';
     }
   }
 
@@ -371,7 +371,7 @@ export class CronEditorComponent implements OnInit, OnChanges {
     this.state.validation.errorMessage = '';
 
     if (!cron) {
-      this.state.validation.errorMessage = 'Cron expression cannot be null';
+      this.state.validation.errorMessage = {key: 'VALIDATION_MESSAGE.NULL'};
       return;
     }
 
@@ -388,7 +388,7 @@ export class CronEditorComponent implements OnInit, OnChanges {
     }
 
     if (cronParts.length !== expected) {
-      this.state.validation.errorMessage = `Invalid cron expression, there must be ${expected} segments`;
+      this.state.validation.errorMessage = {key: 'VALIDATION_MESSAGE.SEGMENTS', params: {n: expected}};
       return;
     }
 
@@ -505,27 +505,6 @@ export class CronEditorComponent implements OnInit, OnChanges {
         errorMessage: ''
       }
     };
-  }
-
-  private getOrdinalSuffix(value: string) {
-    if (value.length > 1) {
-      const secondToLastDigit = value.charAt(value.length - 2);
-      if (secondToLastDigit === '1') {
-        return 'th';
-      }
-    }
-
-    const lastDigit = value.charAt(value.length - 1);
-    switch (lastDigit) {
-      case '1':
-        return 'st';
-      case '2':
-        return 'nd';
-      case '3':
-        return 'rd';
-      default:
-        return 'th';
-    }
   }
 
   private getSelectOptions() {
