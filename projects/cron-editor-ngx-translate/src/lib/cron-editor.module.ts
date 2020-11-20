@@ -14,7 +14,7 @@ import {PrefixPipe} from './pipes/prefix.pipe';
   imports: [
     CommonModule,
     FormsModule,
-    TranslateModule.forRoot(),
+    TranslateModule.forChild(),
   ],
   exports: [CronEditorComponent]
 })
