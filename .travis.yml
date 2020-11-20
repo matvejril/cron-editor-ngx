@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "11.3.0"
+  - "12.16.3"
 dist: trusty
 sudo: false
 
@@ -12,16 +12,14 @@ cache:
   directories:
     - node_modules
 
-install:
-  - yarn
-
 script:
-  - yarn lint
-  - yarn run build --base-href https://claudiuconstantin.github.io/cron-editor/
+  - npm run build_lib
+  - ng build --prod --base-href https://burdukowsky.github.io/cron-editor-ngx-translate/
+
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN
+  github_token: $GITHUB_TOKEN
   local_dir: dist/cron-editor-app
   on:
     branch: master
