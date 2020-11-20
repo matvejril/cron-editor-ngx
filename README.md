@@ -7,7 +7,13 @@ This library uses the Bootstrap 3 CSS classes, but does not include them. You ca
 
 **The purpose of this fork is ability to use `cron-editor` with `ngx-translate`.**
 
+## Demo
+
+A demo of this library can be found [here](https://burdukowsky.github.io/cron-editor-ngx-translate/).
+
 ## Installation
+
+This library is published as a [npm package](https://www.npmjs.com/package/cron-editor-ngx-translate).
 
 ```
 npm install cron-editor-ngx-translate --save
