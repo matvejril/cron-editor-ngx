@@ -97,7 +97,7 @@
                 <!-- Daily-->
                 <div class="tab-pane" *ngIf="!options.hideDailyTab" [ngClass]="{'active': activeTab === 'daily'}">
                     <div class="well well-small">
-                        <input type="radio" name="daily-radio" value="everyDays" [disabled]="disabled" (change)="regenerateCron()"
+                        <input type="radio" [name]="'daily-radio-' + id" value="everyDays" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.daily.subTab" value="everyDays" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.daily.subTab" [ngClass]="state.formRadioClass" checked="checked">
                         {{'DAILY.EVERY' | prefix | translate}}
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="well well-small">
-                        <input type="radio" name="daily-radio" value="everyWeekDay" [disabled]="disabled" (change)="regenerateCron()"
+                        <input type="radio" [name]="'daily-radio-' + id" value="everyWeekDay" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.daily.subTab" [ngClass]="state.formRadioClass"> {{'DAILY.WORKING_DAY' | prefix | translate}}
                         <cron-time-picker [disabled]="disabled || activeTab !== 'daily' || state.daily.subTab !== 'everyWeekDay'"
                             (change)="regenerateCron()" [(time)]="state.daily.everyWeekDay" [selectClass]="options.formSelectClass"
@@ -173,7 +173,7 @@
                 <!-- Monthly-->
                 <div class="tab-pane" *ngIf="!options.hideMonthlyTab" [ngClass]="{'active': activeTab === 'monthly'}">
                     <div class="well well-small">
-                        <input type="radio" name="monthly-radio" value="specificDay" [disabled]="disabled" (change)="regenerateCron()"
+                        <input type="radio" [name]="'monthly-radio-' + id" value="specificDay" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.monthly.subTab" [ngClass]="state.formRadioClass"> {{'MONTHLY.ON' | prefix | translate}}
                         <select class="month-days" [disabled]="disabled || activeTab !== 'monthly' || state.monthly.subTab !== 'specificDay'"
                             (change)="regenerateCron()" [(ngModel)]="state.monthly.specificDay.day" [ngClass]="options.formSelectClass">
@@ -195,7 +195,7 @@
                             (change)="regenerateCron()" [(ngModel)]="state.monthly.runOnWeekday" [ngClass]="options.formCheckboxClass"> {{'MONTHLY.NEAREST_WEEKDAY' | prefix | translate}}</label>
                     </div>
                     <div class="well well-small">
-                        <input type="radio" name="monthly-radio" value="specificWeekDay" [disabled]="disabled" (change)="regenerateCron()"
+                        <input type="radio" [name]="'monthly-radio-' + id" value="specificWeekDay" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.monthly.subTab" [ngClass]="state.formRadioClass">
                         {{'MONTHLY.ON' | prefix | translate}}
                         <select class="day-order-in-month" [disabled]="disabled || activeTab !== 'monthly' || state.monthly.subTab !== 'specificWeekDay'"
@@ -234,7 +234,7 @@
                 <!-- Yearly-->
                 <div class="tab-pane" *ngIf="!options.hideYearlyTab" [ngClass]="{'active': activeTab === 'yearly'}">
                     <div class="well well-small">
-                        <input type="radio" name="yearly-radio" value="specificMonthDay" [disabled]="disabled" (change)="regenerateCron()"
+                        <input type="radio" [name]="'yearly-radio-' + id" value="specificMonthDay" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.yearly.subTab" [ngClass]="state.formRadioClass">
                         {{'YEARLY.EVERY' | prefix | translate}}
                         <select class="months" [disabled]="disabled || activeTab !== 'yearly' || state.yearly.subTab !== 'specificMonthDay'"
@@ -257,7 +257,7 @@
                         [(ngModel)]="state.yearly.runOnWeekday" [ngClass]="options.formCheckboxClass"> {{'YEARLY.NEAREST_WEEKDAY' | prefix | translate}}</label>
                     </div>
                     <div class="well well-small">
-                        <input type="radio" name="yearly-radio" value="specificMonthWeek" [disabled]="disabled"
+                        <input type="radio" [name]="'yearly-radio-' + id" value="specificMonthWeek" [disabled]="disabled"
                             (change)="regenerateCron()" [(ngModel)]="state.yearly.subTab" [ngClass]="state.formRadioClass">
                         {{'YEARLY.ON' | prefix | translate}}
                         <select class="day-order-in-month" [disabled]="disabled || activeTab !== 'yearly' || state.yearly.subTab !== 'specificMonthWeek'"

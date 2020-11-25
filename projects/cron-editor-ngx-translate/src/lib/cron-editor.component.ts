@@ -10,6 +10,9 @@ import Utils from './Utils';
   styleUrls: ['./cron-editor.component.css']
 })
 export class CronEditorComponent implements OnInit, OnChanges {
+  static nextId = 0;
+  id = ++CronEditorComponent.nextId;
+
   @Input() public disabled: boolean;
   @Input() public options: CronOptions;
 
