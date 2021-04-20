@@ -35,7 +35,8 @@ export class AppComponent {
 
     hideSeconds: true,
     removeSeconds: true,
-    removeYears: true
+    removeYears: true,
+    simpleCron: false,
   };
 
   constructor(private translate: TranslateService,

@@ -23,4 +23,7 @@ export interface CronOptions {
 
     /** removes Years from the Cron expression */
     removeYears: boolean;
+
+    /** removes rows with weeks for Java class CronSequenceGenerator */
+    simpleCron: boolean;
 }

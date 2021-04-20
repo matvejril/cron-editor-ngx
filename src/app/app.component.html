@@ -36,6 +36,8 @@
           [(ngModel)]="cronOptions.removeSeconds">removeSeconds: {{cronOptions.removeSeconds}}</label>
         <label class="advanced-cron-editor-label"><input type="checkbox"
           [(ngModel)]="cronOptions.removeYears">removeYears: {{cronOptions.removeYears}}</label>
+      <label class="advanced-cron-editor-label"><input type="checkbox"
+          [(ngModel)]="cronOptions.simpleCron">simpleCron: {{cronOptions.simpleCron}}</label>
     </div>
     <div class="col-md-10">
         <cron-editor [(cron)]="cronExpression" [disabled]="isCronDisabled" [options]="cronOptions"></cron-editor>
