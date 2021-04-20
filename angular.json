@@ -134,33 +134,33 @@
         }
       }
     },
-    "cron-editor-ngx-translate": {
-      "root": "projects/cron-editor-ngx-translate",
-      "sourceRoot": "projects/cron-editor-ngx-translate/src",
+    "cron-editor-ngx": {
+      "root": "projects/cron-editor-ngx",
+      "sourceRoot": "projects/cron-editor-ngx/src",
       "projectType": "library",
       "prefix": "cron",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/cron-editor-ngx-translate/tsconfig.lib.json",
-            "project": "projects/cron-editor-ngx-translate/ng-package.json"
+            "tsConfig": "projects/cron-editor-ngx/tsconfig.lib.json",
+            "project": "projects/cron-editor-ngx/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/cron-editor-ngx-translate/src/test.ts",
-            "tsConfig": "projects/cron-editor-ngx-translate/tsconfig.spec.json",
-            "karmaConfig": "projects/cron-editor-ngx-translate/karma.conf.js"
+            "main": "projects/cron-editor-ngx/src/test.ts",
+            "tsConfig": "projects/cron-editor-ngx/tsconfig.spec.json",
+            "karmaConfig": "projects/cron-editor-ngx/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/cron-editor-ngx-translate/tsconfig.lib.json",
-              "projects/cron-editor-ngx-translate/tsconfig.spec.json"
+              "projects/cron-editor-ngx/tsconfig.lib.json",
+              "projects/cron-editor-ngx/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -170,5 +170,8 @@
       }
     }
   },
-  "defaultProject": "cron-editor-app"
+  "defaultProject": "cron-editor-app",
+  "cli": {
+    "analytics": false
+  }
 }

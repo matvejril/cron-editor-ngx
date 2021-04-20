@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {CronEditorTranslateService, CronOptions} from 'cron-editor-ngx-translate';
+import {CronEditorTranslateService, CronOptions} from 'cron-editor-ngx';
 import {TranslateService} from '@ngx-translate/core';
 
 import {en} from './translations/en';
