@@ -2,19 +2,19 @@
   "name": "cron-editor-app",
   "description": "A cron expression generator to be used in Angular applications",
   "author": {
-    "name": "Mavey Ril",
+    "name": "Matvey Ril",
     "email": "matvej.ril@gmail.com"
   },
   "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/matvejril/cron-editor-ngx"
+    "url": "git://github.com/matvejril/cron-editor-with-translate"
   },
   "bugs": {
-    "url": "https://github.com/matvejril/cron-editor-ngx/issues"
+    "url": "https://github.com/matvejril/cron-editor-with-translate/issues"
   },
-  "homepage": "https://github.com/matvejril/cron-editor-ngx",
+  "homepage": "https://github.com/matvejril/cron-editor-with-translate",
   "keywords": [
     "angular",
     "cron",
@@ -28,13 +28,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build_lib": "ng build cron-editor-ngx",
+    "build_lib": "ng build cron-editor-with-translate",
     "build": "npm run build_lib && ng build --prod",
     "start": "npm run build_lib && ng serve",
-    "copy-license": "node -e \"require('fs').copyFileSync('LICENSE.md', 'dist/cron-editor-ngx/LICENSE.md')\"",
-    "copy-readme": "node -e \"require('fs').copyFileSync('README.md', 'dist/cron-editor-ngx/README.md')\"",
+    "copy-license": "node -e \"require('fs').copyFileSync('LICENSE.md', 'dist/cron-editor-with-translate/LICENSE.md')\"",
+    "copy-readme": "node -e \"require('fs').copyFileSync('README.md', 'dist/cron-editor-with-translate/README.md')\"",
     "copy-files": "npm run copy-license && npm run copy-readme",
-    "pack_lib": "cd dist/cron-editor-ngx && npm pack",
+    "pack_lib": "cd dist/cron-editor-with-translate && npm pack",
     "package": "npm run build_lib && npm run copy-files && npm run pack_lib"
   },
   "private": true,

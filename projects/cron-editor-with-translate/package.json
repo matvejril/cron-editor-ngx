@@ -1,5 +1,5 @@
 {
-  "name": "cron-editor-ngx",
+  "name": "cron-editor-with-translate",
   "description": "A cron expression generator to be used in Angular applications",
   "author": {
     "name": "Matvey Ril",
@@ -9,12 +9,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/matvejril/cron-editor-ngx"
+    "url": "git://github.com/matvejril/cron-editor-with-translate"
   },
   "bugs": {
-    "url": "https://github.com/matvejril/cron-editor-ngx/issues"
+    "url": "https://github.com/matvejril/cron-editor-with-translate/issues"
   },
-  "homepage": "https://github.com/matvejril/cron-editor-ngx",
+  "homepage": "https://github.com/matvejril/cron-editor-with-translate",
   "keywords": [
     "angular",
     "cron",

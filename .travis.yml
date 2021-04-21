@@ -14,7 +14,7 @@ cache:
 
 script:
   - npm run build_lib
-  - ng build --prod --base-href https://matvejril.github.io/cron-editor-ngx/
+  - ng build --prod --base-href https://matvejril.github.io/cron-editor-with-translate/
 
 deploy:
   provider: pages

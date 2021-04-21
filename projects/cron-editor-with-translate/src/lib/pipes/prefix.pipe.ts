@@ -1,6 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
-export const ngxTranslatePrefix = 'cron-editor-ngx';
+export const ngxTranslatePrefix = 'cron-editor-with-translate';
 
 @Pipe({
   name: 'prefix'

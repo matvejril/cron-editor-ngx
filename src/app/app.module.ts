@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {TranslateModule} from '@ngx-translate/core';
-import {CronEditorModule} from 'cron-editor-ngx';
+import {CronEditorModule} from 'cron-editor-with-translate';
 
 import {AppComponent} from './app.component';
 import {LangSwitcherComponent} from './lang-switcher/lang-switcher.component';

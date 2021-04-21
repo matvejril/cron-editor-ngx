@@ -1,6 +1,6 @@
-# cron-editor-ngx
+# cron-editor-with-translate
 
-`cron-editor-ngx` is library that helps the user graphically build a CRON expression (quartz format only) in an Angular application.
+`cron-editor-with-translate` is library that helps the user graphically build a CRON expression (quartz format only) in an Angular application.
 It is a fork of [cron-editor](https://github.com/claudiuconstantin/cron-editor).
 
 This library uses the Bootstrap 3 CSS classes, but does not include them. You can style the component yourself.
@@ -9,11 +9,11 @@ This library uses the Bootstrap 3 CSS classes, but does not include them. You ca
 
 ## Demo
 
-A demo of this library can be found [here](https://matvejril.github.io/cron-editor-ngx/).
+A demo of this library can be found [here](https://matvejril.github.io/cron-editor-with-translate/).
 
 ## Installation
 
-This library is published as a [npm package](https://www.npmjs.com/package/cron-editor-ngx).
+This library is published as a [npm package](https://www.npmjs.com/package/cron-editor-with-translate).
 
 ```
 npm install cron-editor-ngx --save
@@ -26,7 +26,7 @@ npm install cron-editor-ngx --save
 For example, in `AppModule`:
 
 ```ts
-import {CronEditorModule} from 'cron-editor-ngx';
+import {CronEditorModule} from 'cron-editor-with-translate';
  
 @NgModule({
     imports: [..., CronEditorModule],
@@ -45,7 +45,7 @@ Example:
 
 ```ts
 import {Component} from '@angular/core';
-import {CronEditorTranslateService} from 'cron-editor-ngx';
+import {CronEditorTranslateService} from 'cron-editor-with-translate';
 
 @Component({
   selector: 'app-root',
@@ -129,7 +129,7 @@ Template:
 Component:
 ```ts
 import {Component} from '@angular/core';
-import {CronOptions} from 'cron-editor-ngx';
+import {CronOptions} from 'cron-editor-with-translate';
 
 @Component({
   selector: 'app-my',

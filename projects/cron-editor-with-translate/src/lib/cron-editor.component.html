@@ -114,7 +114,7 @@
                         </cron-time-picker>
                     </div>
 
-                    <div class="well well-small" *ngIf="!options.simpleCron">
+                    <div class="well well-small">
                         <input type="radio" [name]="'daily-radio-' + id" value="everyWeekDay" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.daily.subTab" [ngClass]="state.formRadioClass"> {{'DAILY.WORKING_DAY' | prefix | translate}}
                         <cron-time-picker [disabled]="disabled || activeTab !== 'daily' || state.daily.subTab !== 'everyWeekDay'"
@@ -194,7 +194,7 @@
                         <label class="advanced-cron-editor-label"><input type="checkbox" [disabled]="disabled || activeTab !== 'monthly' || state.monthly.subTab !== 'specificDay'"
                             (change)="regenerateCron()" [(ngModel)]="state.monthly.runOnWeekday" [ngClass]="options.formCheckboxClass"> {{'MONTHLY.NEAREST_WEEKDAY' | prefix | translate}}</label>
                     </div>
-                    <div class="well well-small" *ngIf="!options.simpleCron">
+                    <div class="well well-small" *ngIf="!options.removeExtendedCron">
                         <input type="radio" [name]="'monthly-radio-' + id" value="specificWeekDay" [disabled]="disabled" (change)="regenerateCron()"
                             [(ngModel)]="state.monthly.subTab" [ngClass]="state.formRadioClass">
                         {{'MONTHLY.ON' | prefix | translate}}
@@ -256,7 +256,7 @@
                         <label class="advanced-cron-editor-label"><input type="checkbox" (change)="regenerateCron()"
                         [(ngModel)]="state.yearly.runOnWeekday" [ngClass]="options.formCheckboxClass"> {{'YEARLY.NEAREST_WEEKDAY' | prefix | translate}}</label>
                     </div>
-                    <div class="well well-small" *ngIf="!options.simpleCron">
+                    <div class="well well-small" *ngIf="!options.removeExtendedCron">
                         <input type="radio" [name]="'yearly-radio-' + id" value="specificMonthWeek" [disabled]="disabled"
                             (change)="regenerateCron()" [(ngModel)]="state.yearly.subTab" [ngClass]="state.formRadioClass">
                         {{'YEARLY.ON' | prefix | translate}}

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {CronEditorTranslateService, CronOptions} from 'cron-editor-ngx';
+import {CronEditorTranslateService, CronOptions} from 'cron-editor-with-translate';
 import {TranslateService} from '@ngx-translate/core';
 
 import {en} from './translations/en';
@@ -36,7 +36,7 @@ export class AppComponent {
     hideSeconds: true,
     removeSeconds: true,
     removeYears: true,
-    simpleCron: false,
+    removeExtendedCron: true,
   };
 
   constructor(private translate: TranslateService,

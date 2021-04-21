@@ -9,7 +9,7 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <code>cron-editor-ngx</code> {{'LIBRARY_IS' | translate}}
+      <code>cron-editor-with-translate</code> {{'LIBRARY_IS' | translate}}
     </div>
   </div>
   <hr>
@@ -37,7 +37,7 @@
         <label class="advanced-cron-editor-label"><input type="checkbox"
           [(ngModel)]="cronOptions.removeYears">removeYears: {{cronOptions.removeYears}}</label>
       <label class="advanced-cron-editor-label"><input type="checkbox"
-          [(ngModel)]="cronOptions.simpleCron">simpleCron: {{cronOptions.simpleCron}}</label>
+          [(ngModel)]="cronOptions.removeExtendedCron">removeExtendedCron: {{cronOptions.removeExtendedCron}}</label>
     </div>
     <div class="col-md-10">
         <cron-editor [(cron)]="cronExpression" [disabled]="isCronDisabled" [options]="cronOptions"></cron-editor>

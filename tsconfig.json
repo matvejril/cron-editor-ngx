@@ -18,8 +18,8 @@
       "dom"
     ],
     "paths": {
-      "cron-editor-ngx": [
-        "dist/cron-editor-ngx"
+      "cron-editor-with-translate": [
+        "dist/cron-editor-with-translate"
       ]
     }
   }
