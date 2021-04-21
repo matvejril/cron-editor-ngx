@@ -16,7 +16,7 @@ A demo of this library can be found [here](https://matvejril.github.io/cron-edit
 This library is published as a [npm package](https://www.npmjs.com/package/cron-editor-with-translate).
 
 ```
-npm install cron-editor-ngx --save
+npm install cron-editor-with-translate --save
 ```
 
 ## Usage
